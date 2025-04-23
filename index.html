@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Responsive CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">ResponsiveCSS</div>
+                <div class="menu-toggle" id="mobile-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#flexbox">Flexbox</a></li>
+                    <li><a href="#grid">Grid</a></li>
+                    <li><a href="#images">Images</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Master Responsive CSS</h1>
+            <p>Learn how to create beautiful, responsive websites using modern CSS techniques</p>
+            <a href="#flexbox" class="btn">Start Learning</a>
+        </div>
+    </section>
+
+    <section id="flexbox" class="section">
+        <div class="container">
+            <h2>Flexbox Layout</h2>
+            <p>Flexbox is a one-dimensional layout method for arranging items in rows or columns.</p>
+            
+            <div class="flexbox-demo">
+                <div class="flex-item">Item 1</div>
+                <div class="flex-item">Item 2</div>
+                <div class="flex-item">Item 3</div>
+                <div class="flex-item">Item 4</div>
+            </div>
+            
+            <div class="code-example">
+                <pre><code>.flexbox-demo {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="grid" class="section alt-bg">
+        <div class="container">
+            <h2>CSS Grid Layout</h2>
+            <p>Grid is a two-dimensional layout system designed for complex layouts.</p>
+            
+            <div class="grid-demo">
+                <div class="grid-item grid-item-1">Grid Item 1</div>
+                <div class="grid-item grid-item-2">Grid Item 2</div>
+                <div class="grid-item grid-item-3">Grid Item 3</div>
+                <div class="grid-item grid-item-4">Grid Item 4</div>
+                <div class="grid-item grid-item-5">Grid Item 5</div>
+                <div class="grid-item grid-item-6">Grid Item 6</div>
+            </div>
+            
+            <div class="code-example">
+                <pre><code>.grid-demo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="images" class="section">
+        <div class="container">
+            <h2>Responsive Images</h2>
+            <p>Learn how to make images scale correctly on different screen sizes.</p>
+            
+            <div class="image-container">
+                <img src="pic.jpg" alt="Responsive design example" class="responsive-img">
+                <div class="image-description">
+                    <h3>Fluid Images</h3>
+                    <p>Images should scale with their container while maintaining aspect ratio.</p>
+                    <div class="code-example">
+                        <pre><code>.responsive-img {
+  max-width: 100%;
+  height: auto;
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section alt-bg">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>Have questions about responsive CSS? Contact us!</p>
+            
+            <div class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn">Send Message</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ResponsiveCSS Learning. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">YouTube</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for mobile menu toggle
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+        
+    </script>
+</body>
+</html>
